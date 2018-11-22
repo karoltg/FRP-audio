@@ -1,0 +1,18 @@
+C:\Users\Karol\source\repos\FRP audioplayer\FRP audioplayer\bin\Debug\FRP audioplayer.exe.config
+C:\Users\Karol\source\repos\FRP audioplayer\FRP audioplayer\bin\Debug\FRP audioplayer.exe
+C:\Users\Karol\source\repos\FRP audioplayer\FRP audioplayer\bin\Debug\FRP audioplayer.pdb
+C:\Users\Karol\source\repos\FRP audioplayer\FRP audioplayer\bin\Debug\NAudio.dll
+C:\Users\Karol\source\repos\FRP audioplayer\FRP audioplayer\bin\Debug\NAudio.xml
+C:\Users\Karol\source\repos\FRP audioplayer\FRP audioplayer\obj\Debug\FRP audioplayer.csprojAssemblyReference.cache
+C:\Users\Karol\source\repos\FRP audioplayer\FRP audioplayer\obj\Debug\MainWindow.g.cs
+C:\Users\Karol\source\repos\FRP audioplayer\FRP audioplayer\obj\Debug\App.g.cs
+C:\Users\Karol\source\repos\FRP audioplayer\FRP audioplayer\obj\Debug\FRP audioplayer_MarkupCompile.cache
+C:\Users\Karol\source\repos\FRP audioplayer\FRP audioplayer\obj\Debug\FRP audioplayer_MarkupCompile.lref
+C:\Users\Karol\source\repos\FRP audioplayer\FRP audioplayer\obj\Debug\MainWindow.baml
+C:\Users\Karol\source\repos\FRP audioplayer\FRP audioplayer\obj\Debug\FRP audioplayer.g.resources
+C:\Users\Karol\source\repos\FRP audioplayer\FRP audioplayer\obj\Debug\FRP_audioplayer.Properties.Resources.resources
+C:\Users\Karol\source\repos\FRP audioplayer\FRP audioplayer\obj\Debug\FRP audioplayer.csproj.GenerateResource.cache
+C:\Users\Karol\source\repos\FRP audioplayer\FRP audioplayer\obj\Debug\FRP audioplayer.csproj.CoreCompileInputs.cache
+C:\Users\Karol\source\repos\FRP audioplayer\FRP audioplayer\obj\Debug\FRP audioplayer.csproj.CopyComplete
+C:\Users\Karol\source\repos\FRP audioplayer\FRP audioplayer\obj\Debug\FRP audioplayer.exe
+C:\Users\Karol\source\repos\FRP audioplayer\FRP audioplayer\obj\Debug\FRP audioplayer.pdb
