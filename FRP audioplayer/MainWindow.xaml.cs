@@ -23,6 +23,7 @@ namespace FRP_audioplayer
 	{
 		AudioPlay first, second;
 		LoadFiles files = new LoadFiles();
+		
 
 		public MainWindow()
 		{
@@ -36,6 +37,11 @@ namespace FRP_audioplayer
 		{
 			second = new AudioPlay("Red Hot Chili Peppers - Californication.mp3");
 			second.Play();
+		}
+
+		private void Button_Click(object sender, RoutedEventArgs e)
+		{
+
 		}
 
 		private void Play1(object sender, RoutedEventArgs e)
