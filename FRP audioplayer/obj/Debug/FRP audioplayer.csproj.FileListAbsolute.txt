@@ -16,3 +16,5 @@ C:\Users\Karol\source\repos\FRP audioplayer\FRP audioplayer\obj\Debug\FRP audiop
 C:\Users\Karol\source\repos\FRP audioplayer\FRP audioplayer\obj\Debug\FRP audioplayer.csproj.CopyComplete
 C:\Users\Karol\source\repos\FRP audioplayer\FRP audioplayer\obj\Debug\FRP audioplayer.exe
 C:\Users\Karol\source\repos\FRP audioplayer\FRP audioplayer\obj\Debug\FRP audioplayer.pdb
+C:\Users\Karol\source\repos\FRP audioplayer\FRP audioplayer\bin\Debug\AvalonLibrary.dll
+C:\Users\Karol\source\repos\FRP audioplayer\FRP audioplayer\bin\Debug\AvalonLibrary.xml

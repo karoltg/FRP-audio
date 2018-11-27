@@ -8,18 +8,18 @@ namespace FRP_audioplayer
 {
     class FileData
     {
-		private string fullFileName { get; set; }
-		private string fileName { get; set; }
-		private string fileExtension { get; set; }
-		private float fileLength { get; set; }
+		public string fullFileName { get; set; }
+		public string fileName { get; set; }
+		public string fileExtension { get; set; }
+		public string filePath { get; set; }
 
 		public FileData() { }
-		public FileData(string fullFileName = null, string fileName = null, string fileExtension = null, float fileLength = 0)
+		public FileData(string fullFileName = null, string fileName = null, string fileExtension = null, string filePath = null)
 		{
 			this.fullFileName = fullFileName;
 			this.fileName = fileName;
 			this.fileExtension = fileExtension;
-			this.fileLength = fileLength;
+			this.filePath = filePath;
 		}
 
     }

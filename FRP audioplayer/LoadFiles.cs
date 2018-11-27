@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using NAudio;
 
 namespace FRP_audioplayer
 {
@@ -11,9 +12,7 @@ namespace FRP_audioplayer
     {
 		public ListofFiles background;
 		public ListofFiles environment;
-
-		public FileData fData;
-
+		
 		public LoadFiles()
 		{
 			this.background = new ListofFiles();
@@ -22,26 +21,22 @@ namespace FRP_audioplayer
 
 		public void loadBackground()
 		{
-			Directory.GetFiles(@"/", "*.mp3");
-
-			foreach(string s in Directory.GetFiles(@"background","*.mp3").Select(Path.GetFileName))
+			var v = Directory.GetFiles(@"background","*.mp3");
+				
+			for(int i = 0; i < v.Length; i++)
 			{
-				background.Add(new FileData(s));
+				background.Add(new FileData(Path.GetFileName(v[i]),Path.GetFileNameWithoutExtension(v[i]),Path.GetExtension(v[i]),v[i]));
 			}
 		}
 
 		public void loadEnvironment()
 		{
+			var v = Directory.GetFiles(@"environment", "*.mp3");
 
-			foreach (string s in Directory.GetFiles(@"environment", "*.mp3").Select(Path.GetFileName))
+			for (int i = 0; i < v.Length; i++)
 			{
-				environment.Add(new FileData(s));
+				environment.Add(new FileData(Path.GetFileName(v[i]), Path.GetFileNameWithoutExtension(v[i]), Path.GetExtension(v[i]), v[i]));
 			}
-
-			//foreach(string file in Directory.EnumerateFiles("","*.mp3"))
-			//{
-
-			//}
 		}
 
 	}
