@@ -7,18 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="622" Width="901">
     <Grid>
-        <Button x:Name="Play1" Content="Play"  HorizontalAlignment="Left" Margin="198,25,0,0" VerticalAlignment="Top" Width="61" Height="56" Click="Play1_Click"/>
-        <Button x:Name="Play2" Content="Play" HorizontalAlignment="Left" Margin="198,106,0,0" VerticalAlignment="Top" Width="61" Height="56" Click="Play2_Click"/>
-        <Button x:Name="Stop1" Content="Stop" HorizontalAlignment="Left" Margin="284,25,0,0" VerticalAlignment="Top" Width="61" Height="56" Click="Stop1_Click"/>
-        <Button x:Name="Stop2" Content="Stop" HorizontalAlignment="Left" Margin="284,106,0,0" VerticalAlignment="Top" Width="61" Height="56" Click="Stop2_Click"/>
-        <Slider HorizontalAlignment="Left" Margin="382,25,0,0" VerticalAlignment="Top" Width="301"/>
-        <Slider HorizontalAlignment="Left" Margin="382,63,0,0" VerticalAlignment="Top" Width="301" RenderTransformOrigin="0.505,3.778"/>
-        <Slider HorizontalAlignment="Left" Margin="382,106,0,0" VerticalAlignment="Top" Width="301"/>
-        <Slider HorizontalAlignment="Left" Margin="382,144,0,0" VerticalAlignment="Top" Width="301"/>
-        <Label Content="Volume" HorizontalAlignment="Left" Margin="394,4,0,0" VerticalAlignment="Top"/>
-        <Label Content="Volume" HorizontalAlignment="Left" Margin="394,86,0,0" VerticalAlignment="Top"/>
-        <Label Content="Playing time" HorizontalAlignment="Left" Margin="394,43,0,0" VerticalAlignment="Top"/>
-        <Label Content="Playing time" HorizontalAlignment="Left" Margin="394,124,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Play1" Content="Play"  HorizontalAlignment="Left" Margin="272,28,0,0" VerticalAlignment="Top" Width="61" Height="56" Click="Play1_Click"/>
+        <Button x:Name="Play2" Content="Play" HorizontalAlignment="Left" Margin="272,109,0,0" VerticalAlignment="Top" Width="61" Height="56" Click="Play2_Click"/>
+        <Slider x:Name="Background_Volume" HorizontalAlignment="Left" Minimum="0" Maximum="100" Margin="351,49,0,0" VerticalAlignment="Top" Width="301" ValueChanged="Slider_ValueChanged_Background_Volume"/>
+        <Slider x:Name="Environment_Volume" HorizontalAlignment="Left" Minimum="0" Maximum="100" Margin="351,129,0,0" VerticalAlignment="Top" Width="301" ValueChanged="Slider_ValueChanged_Environment_Volume"/>
+        <Label Content="Volume" HorizontalAlignment="Left" Margin="363,28,0,0" VerticalAlignment="Top"/>
+        <Label Content="Volume" HorizontalAlignment="Left" Margin="363,109,0,0" VerticalAlignment="Top"/>
         <ListView x:Name="BackgroundList" MouseDoubleClick="BackgroundList_MouseDoubleClick" HorizontalAlignment="Left" Height="293" Margin="21,259,0,0" VerticalAlignment="Top" Width="238">
             <ListView.View>
                 <GridView>

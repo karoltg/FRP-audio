@@ -40,8 +40,6 @@ namespace FRP_audioplayer
 			InitializeComponent();
 			files.loadBackground();
 			files.loadEnvironment();
-			Stop1.Visibility = Visibility.Hidden;
-			Stop2.Visibility = Visibility.Hidden;
 			Play1.IsEnabled = false;
 			Play2.IsEnabled = false;
 
@@ -56,6 +54,10 @@ namespace FRP_audioplayer
 			playBackground = new AudioPlay();
 			playEnvironment = new AudioPlay();
 
+            //this.Background_Volume.Value = playBackground.getVolume();
+            //this.Environment_Volume.Value = playEnvironment.getVolume();
+            
+
 
 		}
 
@@ -69,40 +71,65 @@ namespace FRP_audioplayer
 			playBackground.setAudioData(files.background[BackgroundList.SelectedIndex].filePath);
 			playBackground.Play();
 
-
 			if (Play1.IsEnabled == false)
 			{
 				Play1.IsEnabled = true;
 				Play1.Content = "Stop";
 			}
+           
 		}
 
 		private void EnvironmentList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
 		{
 			playEnvironment.setAudioData(files.environment[EnvironmentList.SelectedIndex].filePath);
 			playEnvironment.Play();
-		}
+
+            if (Play2.IsEnabled == false)
+            {
+                Play2.IsEnabled = true;
+                Play2.Content = "Stop";
+            }
+        }
 
 		private void Play1_Click(object sender, RoutedEventArgs e)
+        {
+			//Play2.Visibility = Visibility.Hidden;
+            if (Play1.IsEnabled == true && Play1.Content.Equals("Stop"))
+            {
+                Play1.Content = "Play";
+                playBackground.Pause();
+            }
+            else if(Play1.IsEnabled == true && Play1.Content.Equals("Play"))
+            {
+                Play1.Content = "Stop";
+                playBackground.Play();
+            }
+
+        }
+
+        private void Slider_ValueChanged_Background_Volume(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            playBackground.setVolume((int)Background_Volume.Value);
+        }
+
+        private void Slider_ValueChanged_Environment_Volume(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            playEnvironment.setVolume((int)Environment_Volume.Value);
+        }
+
+        private void Play2_Click(object sender, RoutedEventArgs e)
 		{
-			Play2.Visibility = Visibility.Hidden;
-
-		}
-
-		private void Play2_Click(object sender, RoutedEventArgs e)
-		{
-
-		}
-
-		private void Stop1_Click(object sender, RoutedEventArgs e)
-		{
-
-		}
-
-		private void Stop2_Click(object sender, RoutedEventArgs e)
-		{
-
-		}
+            if (Play2.IsEnabled == true && Play2.Content.Equals("Stop"))
+            {
+                Play2.Content = "Play";
+                playEnvironment.Pause();
+            }
+            else if (Play2.IsEnabled == true && Play2.Content.Equals("Play"))
+            {
+                Play2.Content = "Stop";
+                playEnvironment.Play();
+            }
+        }
 
 	}
 }
