@@ -13,9 +13,10 @@ namespace FRP_audioplayer
 		private Mp3FileReader mp3 { get; set; }
 		private DirectSoundOut output { get; set; }
         private WaveChannel32 chanel;
-        
+        private WaveOutEvent outputDevice;
 
-		public AudioPlay(string file = null)
+
+        public AudioPlay(string file = null)
 		{
 			this.output = new DirectSoundOut();
 
@@ -24,23 +25,20 @@ namespace FRP_audioplayer
         public void setAudioData(string fileName)
 		{
 			this.mp3 = new Mp3FileReader(fileName);
-            output.Init(new WaveChannel32(this.mp3));
-            this.chanel = new WaveChannel32(this.mp3);
+            this.outputDevice = new WaveOutEvent();
+            this.outputDevice.Init(mp3);
+                    
         }
 
-		public void Play(){ output.Play(); }
+		public void Play(){ outputDevice.Play(); }
 
-        public void Pause(){ output.Pause(); }
+        public void Pause(){ outputDevice.Pause(); }
 
-        public void setVolume(int volume)
-        {
+        public void Stop() { outputDevice.Stop(); }
 
-            float value = (float)volume / 100;
-            //if (value >= 0 && value <= 1)
-            //{
-            //   chanel.Volume = (float)0;
-            //}
-        }
+        public void ClearWaveData() { outputDevice.Dispose(); }
+
+        public void setVolume(int volume) { outputDevice.Volume = (float)volume / 100; }
 
         public int getVolume() { return (int)output.Volume*100; }
     }
